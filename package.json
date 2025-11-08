@@ -1,0 +1,89 @@
+{
+    "name": "appy-vscode",
+    "displayName": "Appy VsCode",
+    "description": "The most advanced multi-language VS Code extension with iPhone emulator, Appy.store, Web Build Preview, CLI integration, and full .appy ecosystem.",
+    "version": "0.1.0",
+    "publisher": "WilliamIsaiahJones",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other",
+        "Programming Languages",
+        "Visualization",
+        "Debuggers"
+    ],
+    "icon": "media/appy-icon.png",
+    "galleryBanner": {
+        "color": "#007ACC",
+        "theme": "dark",
+        "description": "Appy: Multi-language VS Code extension with Appy ecosystem"
+    },
+    "activationEvents": [
+        "onCommand:appy.openHomeScreen",
+        "onCommand:appy.openAppStore",
+        "onCommand:appy.openWebBuildPreview",
+        "onCommand:appy.help",
+        "onCommand:appy.guide",
+        "onCommand:appy.makeTemplate",
+        "onCommand:appy.run",
+        "onCommand:appy.install",
+        "onCommand:appy.convert",
+        "onCommand:appy.runFile",
+        "onLanguage:appy"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            { "command": "appy.openHomeScreen", "title": "Appy: Open Home Screen" },
+            { "command": "appy.openAppStore", "title": "Appy: Open Appy Store" },
+            { "command": "appy.openWebBuildPreview", "title": "Appy: Open Web Build Preview" },
+            { "command": "appy.help", "title": "Appy: Help" },
+            { "command": "appy.guide", "title": "Appy: Guide" },
+            { "command": "appy.makeTemplate", "title": "Appy: Make Template" },
+            { "command": "appy.run", "title": "Appy: Run App" },
+            { "command": "appy.install", "title": "Appy: Install App" },
+            { "command": "appy.convert", "title": "Appy: Convert App to Web Build" },
+            { "command": "appy.runFile", "title": "Appy: Run Active File" }
+        ],
+        "languages": [
+            {
+                "id": "appy",
+                "aliases": ["Appy", "appy"],
+                "extensions": [".appy"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            { "language": "appy", "scopeName": "source.appy", "path": "./syntaxes/appy.tmLanguage.json" }
+        ],
+        "iconThemes": [
+            {
+                "id": "appy-file-icons",
+                "label": "Appy File Icons",
+                "path": "./media/appy-icon-theme.json"
+            }
+        ],
+        "keybindings": [
+            { "command": "appy.runFile", "key": "ctrl+shift+r", "mac": "cmd+shift+r", "when": "editorLangId == appy" }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "echo 'Prepublish skipped; run vsce package manually'",
+        "compile": "echo 'No compilation needed'",
+        "test": "echo 'No test script defined'"
+    },
+    "devDependencies": {
+        "vsce": "^2.13.0",
+        "yo": "^5.0.0",
+        "generator-code": "^1.9.0"
+    },
+    "dependencies": {
+        "fs-extra": "^11.1.1",
+        "open": "^10.2.0"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "repository": { "type": "git", "url": "https://github.com/sussybocca/appy" },
+    "bugs": { "url": "https://github.com/sussybocca/appy/issues" },
+    "homepage": "https://github.com/sussybocca/appy"
+}

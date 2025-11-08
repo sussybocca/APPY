@@ -1,0 +1,25 @@
+{
+  "name": "appy",
+  "displayName": "Appy",
+  "description": "Adds support for the Appy language (.appy files) with VS Code integration, iPhone emulator, Appy Store, and Web Build Preview.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "appy",
+      "aliases": ["Appy", "appy"],
+      "extensions": [".appy"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "appy",
+      "scopeName": "source.appy",
+      "path": "./syntaxes/appy.tmLanguage.json"
+    }]
+  }
+}

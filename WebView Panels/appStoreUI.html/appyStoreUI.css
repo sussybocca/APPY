@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.store-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.store-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.store-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}

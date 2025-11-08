@@ -1,0 +1,21 @@
+appy import icon & assets
+appy make asticicyts
+appy import modules
+appy import .js .hsx .jsx
+appy file import set true
+appy import appy.tone files - true
+appy import files 
+appy file import assets set to true 
+AppyFile name import myscript.appy
+AppyFile import profiler.js
+AppyFile ghost files means hide files and this is the coding language not any commands 
+Appy luanch file myscript.appy
+Appy import files - true
+appy do files profiler.js aka users can use this to for importing there files with appy
+appy blame files meaning look for blank files meaning just skip those if blank and being do or imported which are both the same thing
+appy thanos snap means it imports all files and starts creating an .appy file meaning this is not a command but an script that you can run but yes we are still doing the appy which is going to be an file extension like we are making but it can do lots of things but the one thing it can do it replace an .exe with something more better .appy files will allow you to code exe files in just one file and also you don't need node.js or python all you need is an appy.json and an .appy file if it is really big we recommedate using mutiple .appy files
+appy description profiler.js meaning it imports it and then exports it
+appy filename set to ghost meaning ghost means another phrase of true for an .appy code
+appy set scripts to ghost
+appy do myscript.appy
+appy make filename 

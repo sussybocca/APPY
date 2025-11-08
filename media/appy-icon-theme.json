@@ -1,0 +1,12 @@
+{
+    "iconDefinitions": {
+        "appy-file": {
+            "iconPath": "./appy-file-icon.png"
+        }
+    },
+    "fileExtensions": {
+        "appy": "appy-file"
+    },
+    "folderNames": {},
+    "folderNamesExpanded": {}
+}

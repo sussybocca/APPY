@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Build Preview</title>
+    <link rel="stylesheet" href="webBuildPreview.css">
+</head>
+<body>
+    <h1>Web Build Preview</h1>
+
+    <div id="preview-controls">
+        <select id="build-selector">
+            <option value="">Select App Build</option>
+        </select>
+        <button id="refresh-btn">Refresh Builds</button>
+    </div>
+
+    <div id="preview-container">
+        <!-- Web build iframe will go here -->
+        <iframe id="build-iframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="../appIcons.js"></script>
+    <script src="../batteryDisplay.js"></script>
+    <script src="webBuildPreview.js"></script>
+</body>
+</html>

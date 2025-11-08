@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f5;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#preview-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#build-selector {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#refresh-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#preview-container {
+    display: flex;
+    justify-content: center;
+}
+
+#build-iframe {
+    width: 80%;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}

@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.appy]
+@="AppyFile"
+
+[HKEY_CLASSES_ROOT\AppyFile\DefaultIcon]
+@="D:\\appy\\icon.png"
+
+[HKEY_CLASSES_ROOT\AppyFile\Shell\Open\Command]
+@="\"D:\\appy\\appyLauncher.bat\" \"%1\""

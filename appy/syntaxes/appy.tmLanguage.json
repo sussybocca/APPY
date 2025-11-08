@@ -1,0 +1,48 @@
+{
+  "scopeName": "source.appy",
+  "fileTypes": ["appy"],
+  "name": "Appy",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.appy",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.appy",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "keyword.control.appy",
+      "match": "\\b(appy|AppyFile)\\b"
+    },
+    {
+      "name": "keyword.other.appy.commands",
+      "match": "\\b(import|make|launch|do|set|file|files|description|name|blame|ghost|thanos|snap)\\b"
+    },
+    {
+      "name": "constant.language.appy.boolean",
+      "match": "\\b(true|false|ghost)\\b"
+    },
+    {
+      "name": "string.quoted.double.appy",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.single.appy",
+      "begin": "'",
+      "end": "'"
+    },
+    {
+      "name": "constant.numeric.appy",
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+    },
+    {
+      "name": "entity.name.function.appy",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\()"
+    }
+  ],
+  "repository": {},
+  "uuid": "4a0124b3-56a9-49f3-9c21-6b3f6cbbd0f9"
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appy Home Screen</title>
+    <link rel="stylesheet" href="homeScreen.css">
+</head>
+<body>
+    <!-- Status Bar -->
+    <div id="status-bar">
+        <span id="battery">Battery: 100%</span>
+        <button id="change-bg-btn">Change Background</button>
+    </div>
+
+    <!-- App Grid -->
+    <div id="app-grid"></div>
+
+    <!-- Scripts -->
+    <script src="../batteryDisplay.js"></script>
+    <script src="../appIcons.js"></script>
+    <script>
+        const vscode = acquireVsCodeApi();
+        const appGrid = document.getElementById('app-grid');
+        const changeBgBtn = document.getElementById('change-bg-btn');
+
+        // Request installed apps from extension
+        vscode.postMessage({ command: 'getInstalledApps' });
+
+        // Listen for messages from extension
+        window.addEventListener('message', event => {
+            const message = event.data;
+
+            // Populate installed apps
+            if (message.command === 'sendInstalledApps') {
+                appGrid.innerHTML = '';
+                message.apps.forEach(app => {
+                    const icon = createAppIcon(app.name, app.iconUrl, () => {
+                        vscode.postMessage({ command: 'runApp', appName: app.file });
+                    });
+                    appGrid.appendChild(icon);
+                });
+            }
+
+            // Set background from extension
+            if (message.command === 'setBackground') {
+                document.body.style.backgroundImage = `url('${message.path}')`;
+            }
+        });
+
+        // Trigger background selection
+        changeBgBtn.addEventListener('click', () => {
+            vscode.postMessage({ command: 'selectBackground' });
+        });
+    </script>
+</body>
+</html>

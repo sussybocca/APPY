@@ -1,0 +1,73 @@
+appy excute scripts
+appy %findfilename%
+appy %1 excute progress 
+appy %additonal arguments%
+appy excute $%workingdirectory%
+appy %file% %additional arguments%
+appy %file% %additional arguments% --cwd %workingdirectory%
+percentage available via progress bar space 
+appy check perchantagesge $ctrl+appy
+appy run selected file with workspace 
+appy file detected via workspace
+appy create new directory for appy project
+aoioy deploy
+appy deploy to web build
+appy excute my files $%^#$
+appy files detected via workspace directory
+appy open app store
+appy open web build preview
+appy open home screen
+appy help
+appy guide
+appy make template
+appy run
+appy install
+appy convert
+appy openAppStore
+appy openWebBuildPreview
+appy openHomeScreen
+appy help
+appy guide
+appy makeTemplate
+appy run
+appy install
+appy convert
+appy deploy
+appy deployWebBuild
+appy createProject
+appy createNewProject
+appy runFileInworkspace
+appy executeWithArguments
+appy excuted successfully
+appy execution failed please try again
+appy checking percentages
+appy no file detected in workspace
+appy no workspace detected please open a workspace to continue
+appy creating new project directory
+appy deploying to web build
+appy opening app store
+appy opening web build preview
+appy opening home screen
+appy opening help
+appy opening guide
+appy making template
+appy running app
+appy installing app
+appy converting app to web build
+appy deployment successful
+appy deployment failed please try again later
+appy project created successfully
+appy create hulk project 
+appy create titan project 
+appy create avenger project
+appy create guardian project
+appy create new hulk project
+appy create new titan project
+appy create new avenger project
+appy new hulk project created successfully
+appy new titan project created successfully
+appy new avenger project created successfully
+appy failed to create new project please try again
+appy run file in workspace
+appy excute files with additional arguments
+appy file excuted successfully
