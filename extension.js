@@ -151,6 +151,39 @@ function activate(context) {
         });
     });
 
+    // --- Package App Command (New) ---
+    const appyPackageApp = vscode.commands.registerCommand('appy.packageApp', async () => {
+        if (!fs.existsSync(installedAppsFolder)) fs.mkdirSync(installedAppsFolder, { recursive: true });
+        const files = fs.readdirSync(installedAppsFolder).filter(f => f.endsWith('.appy'));
+        if (files.length === 0) {
+            vscode.window.showErrorMessage('No installed .appy files to package!');
+            return;
+        }
+
+        const pickedApp = await vscode.window.showQuickPick(files, { placeHolder: 'Select a .appy file to package' });
+        if (!pickedApp) return;
+
+        const outputFolder = await vscode.window.showOpenDialog({ canSelectFolders: true, openLabel: 'Select Output Folder' });
+        if (!outputFolder || outputFolder.length === 0) return;
+
+        const outputPath = path.join(outputFolder[0].fsPath, pickedApp);
+        const backendPath = path.join(__dirname, '..', '..', 'AppyBackend.js');
+        const interpreterPath = path.join(__dirname, '..', '..', 'AppyInterpreter.js');
+
+        try {
+            fs.copyFileSync(path.join(installedAppsFolder, pickedApp), outputPath);
+            fs.copyFileSync(backendPath, path.join(outputFolder[0].fsPath, 'AppyBackend.js'));
+            fs.copyFileSync(interpreterPath, path.join(outputFolder[0].fsPath, 'AppyInterpreter.js'));
+
+            // Optionally, you could add pkg or another bundler here to convert to real .exe
+            // cp.execSync(`pkg "${outputPath}" --output "${path.join(outputFolder[0].fsPath, pickedApp.replace('.appy', '.exe'))}"`);
+
+            vscode.window.showInformationMessage(`Packaged ${pickedApp} successfully!`);
+        } catch (err) {
+            vscode.window.showErrorMessage('Error packaging App: ' + err.message);
+        }
+    });
+
     context.subscriptions.push(
         openHomeScreen,
         openAppStore,
@@ -161,7 +194,8 @@ function activate(context) {
         appyRunCLI,
         appyInstallCLI,
         appyConvertCLI,
-        appyRunFile
+        appyRunFile,
+        appyPackageApp
     );
 }
 
